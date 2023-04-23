@@ -1,6 +1,6 @@
 //Resume Json Data
 let resumeData = data.resume,
-    resumeStartIndex = 0, skills, hobbies, filterKey;
+    resumeStartIndex = 0, skills, hobbies;
 
 let positionTitle = 'Applied for: ', candidateName = document.getElementById('name'),
     positionAppliedFor = document.getElementById('position'),
@@ -17,7 +17,7 @@ let positionTitle = 'Applied for: ', candidateName = document.getElementById('na
     education = document.getElementById('education'),
     internship = document.getElementById('internship'),
     achievement = document.getElementById('achievement'),
-    container = document.querySelector('.container'),    
+    container = document.querySelector('.container'),
     resumeContainerBody = document.querySelector('.container-body'),
     noResultContainer = document.getElementById('no-result-container');
 
@@ -28,6 +28,9 @@ const loadResume = () => {
         noResultContainer.style.display = 'block';
         resumeContainerBody.style.display = 'none';
     } else {
+        container.style.display = 'grid';
+        noResultContainer.style.display = 'none';
+        resumeContainerBody.style.display = 'block';
         if (resumeStartIndex < resumeData.length) {
             candidateName.innerText = resumeData[resumeStartIndex].basics.name;
             positionAppliedFor.innerText = positionTitle + resumeData[resumeStartIndex].basics.AppliedFor;
@@ -92,15 +95,15 @@ previousBtn.addEventListener('click', (event) => {
     nextBtn.disabled = false;
 });
 
-searchField.addEventListener('search', (event) => {
-    console.log('Searching...................event :: ', event);
-    filterKey = event.target.value;
-    if (filterKey.length > 0) {
-        resumeData = resumeData.filter(resume =>
+searchField.addEventListener('input', (event) => {
+    console.log('Searching...................event.target.value :: ', event.target.value);
+    if (event.target.value.length > 0) {
+        resumeData = data.resume.filter(resume =>
             resume['basics']['AppliedFor']
                 .toLowerCase()
-                .includes(filterKey.toLowerCase())
+                .includes(event.target.value.toLowerCase())
         );
+        console.log('Searching...................resumeData :: ', resumeData); 
     }
     resumeStartIndex = 0;
     loadResume();
