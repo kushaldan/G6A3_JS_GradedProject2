@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME</title>
+    <link rel="stylesheet" href="css/resume.css">
+</head>
+
+<body>
+    <div class="header">
+        <button class="btn" id="previous">Previous</button>
+        <div class="search">
+            <input type="search" name="search" placeholder="Search...." id="search">
+        </div>
+        <button class="btn" id="next">Next</button>
+    </div>
+    <div class="container">
+        <div id="no-result-container" class="no-result">
+            <img src="./images/sadSmiley.png" alt="Avatar" class="no-result-image" />
+            <p class="no-result-text">
+                <b>Invalid search or No applications for this position</b>
+            </p>
+        </div>
+        <div class="container-body">
+            <div class="resume-header">
+                <div class="title">
+                    <p id="name">Amar Singh Anand</p>
+                    <p id="position">Applied for: Senior Software Engineer</p>
+                </div>
+                <div class="image">
+                    <img height="100px" src="images/candidate.jpeg" alt="Avatar">
+                </div>
+            </div>
+            <div class="resume-body">
+                <div class="information">
+                    <div class="personal">
+                        <p class="info-title">Personal Information</p>
+                        <p id="phone">8334995602</p>
+                        <p id="email">amarsinghanand@gmail.com</p>
+                        <a href="" id="linkedin">LinkedIn</a>
+                    </div>
+                    <div class="personal">
+                        <p class="info-title">Technical Skills</p>
+                        <p></p>
+                        <p id="skills"></p>
+                    </div>
+                    <div class="personal">
+                        <p class="info-title">Hobbies</p>
+                        <p></p>
+                        <p id="hobbies"></p>
+                    </div>
+                </div>
+                <div class="professional">
+                    <h2>Work Experience</h2>
+                    <p></p>
+                    <p id="experience"></p>
+                    <h2>Projects</h2>
+                    <p></p>
+                    <p id="projects"></p>
+                    <h2>Education</h2>
+                    <p></p>
+                    <p id="education"></p>
+                    <h2>Internship</h2>
+                    <p></p>
+                    <p id="internship"></p>
+                    <h2>Achievements</h2>
+                    <p></p>
+                    <p id="achievement"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/data.js" type="text/javascript"></script>
+    <script src="js/resume.js"></script>
+</body>
+
+</html>

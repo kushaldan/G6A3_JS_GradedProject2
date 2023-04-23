@@ -1,0 +1,55 @@
+body
+{
+ text-align:center;
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+}
+#container
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:995px;
+}
+#login
+{
+ background-color:white;
+ width:380px;
+ margin-left:305px;
+ box-shadow:0px 0px 10px 0px #D8D8D8;
+}
+#login p
+{
+ color:#FA8258;
+ font-weight:bold;
+}
+#login #login_label
+{
+ color:#FA8258;
+ padding:20px;
+ font-size:25px;
+ border-bottom:1px solid #E6E6E6;
+ font-weight:bold;
+}
+#login input[type="text"],input[type="password"]
+{
+ width:300px;
+ height:40px;
+ padding-left:10px;
+ margin-top:10px;
+ border:1px solid #D8D8D8;
+}
+#login input[type="submit"]
+{
+ margin-top:10px;
+ width:300px;
+ height:40px;
+ background-color:#FA8258;
+ border:none;
+ color:white;
+ box-shadow:0px 3px 0px 0px #FE642E;
+ border-radius:3px;
+ font-weight:bold;
+}
