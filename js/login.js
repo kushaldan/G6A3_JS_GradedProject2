@@ -25,6 +25,7 @@ const clickForLogin = (event) => {
     if (defaultUser === username.value && defaultPassword === password.value) {
         location.replace("./resume.html");
     }
+    else
     error.innerText = 'Invalid credentials !!!'
 }
 
